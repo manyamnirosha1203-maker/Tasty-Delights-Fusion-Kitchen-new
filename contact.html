@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Tasty Delights Fusion Kitchen</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Tasty Delights Fusion Kitchen</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Order Online</a>
+      <a href="reservation.html">Book a Table</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero section styled like index.html -->
+  <section class="hero">
+    <h1>Get in Touch</h1>
+    <p>We’d love to hear from you! Reach out for reservations, feedback, or inquiries.</p>
+    <div class="buttons">
+      <a href="reservation.html" class="btn">Book a Table</a>
+      <a href="order.html" class="btn">Order Online</a>
+    </div>
+  </section>
+
+  <!-- Contact info cards styled like cuisine cards -->
+  <section class="cuisines contact-info">
+    <div class="cuisine-card">
+      <h3>📍 Address</h3>
+      <p>Tasty Delights Fusion Kitchen<br>Gachibowli, Telangana, India</p>
+    </div>
+    <div class="cuisine-card">
+      <h3>📞 Phone</h3>
+      <p>+91 98765 43210</p>
+    </div>
+    <div class="cuisine-card">
+      <h3>✉️ Email</h3>
+      <p>info@TastyDelightsFusionKitchen.com</p>
+    </div>
+  </section>
+
+  <!-- Contact form styled consistently -->
+  <section class="reservation">
+    <div class="reservation-card">
+      <h2>Send Us a Message</h2>
+      <form action="message-success.html" method="get">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <div class="button-container">
+          <button type="submit" class="btn">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; Tasty Delights Fusion Kitchen. All rights reserved.</p>
+  </footer>
+</body>
+</html>

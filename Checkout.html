@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - Tasty Delights Fusion Kitchen</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Tasty Delights Fusion Kitchen</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Order Online</a>
+      <a href="reservation.html">Book a Table</a>
+      <a href="contact.html">Contact</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="checkout-hero">
+    <h1>Order Summary</h1>
+    <p>Review your selected dishes before proceeding to payment</p>
+  </section>
+
+  <!-- Summary Section -->
+  <section class="checkout-summary" id="summary"></section>
+
+  <!-- Actions -->
+  <section class="checkout-actions">
+    <a href="payment.html" class="checkout-btn">Proceed to Pay</a>
+    <a href="order.html" class="checkout-btn secondary">Add More Items</a>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Tasty Delights Fusion Kitchen. All rights reserved.</p>
+  </footer>
+
+  <!-- Dynamic Script -->
+ <script>
+  const summaryDiv = document.getElementById("summary");
+  let orderData = JSON.parse(localStorage.getItem("orderSummary")) || [];
+  let total = 0;
+
+  function renderSummary() {
+    summaryDiv.innerHTML = "";
+    total = 0;
+
+    if(orderData.length === 0){
+      summaryDiv.innerHTML = "<p>No items selected.</p>";
+      return;
+    }
+
+    orderData.forEach((item, index) => {
+      const line = document.createElement("div");
+      line.className = "checkout-item";
+      line.innerHTML = `
+        <span class="checkout-name">${item.name}</span>
+        <span class="checkout-qty">× ${item.qty}</span>
+        <span class="checkout-price">₹${item.price * item.qty}</span>
+        <button class="remove-btn" data-index="${index}">Remove</button>
+      `;
+      summaryDiv.appendChild(line);
+      total += item.price * item.qty;
+    });
+
+    const totalLine = document.createElement("div");
+    totalLine.className = "checkout-total";
+    totalLine.innerHTML = `
+      <span class="checkout-name">Total</span>
+      <span class="checkout-qty"></span>
+      <span class="checkout-price">₹${total}</span>
+    `;
+    summaryDiv.appendChild(totalLine);
+
+    // Attach remove button listeners
+    document.querySelectorAll(".remove-btn").forEach(btn => {
+      btn.addEventListener("click", function() {
+        const index = this.getAttribute("data-index");
+        orderData.splice(index, 1); // remove item
+        localStorage.setItem("orderSummary", JSON.stringify(orderData));
+        renderSummary(); // re-render
+      });
+    });
+  }
+
+  renderSummary();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Table - Tasty Delights Fusion Kitchen</title>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+  <header>
+    <div class="logo">Tasty Delights Fusion Kitchen</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Order Online</a>
+      <a href="reservation.html" class="active">Book a Table</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero section styled like index.html -->
+  <section class="hero">
+    <h1>Reserve Your Table</h1>
+    <p>Enjoy a seamless dining experience by booking your table in advance.</p>
+  </section>
+
+  <!-- Reservation form -->
+  <section class="reservation">
+    <div class="reservation-card">
+      <h2>Table Reservation Form</h2>
+      <form action="booking-success.html" method="get">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time" required />
+
+        <label for="guests">Number of Guests</label>
+        <input type="number" id="guests" name="guests" min="1" max="20" required />
+
+        <div class="button-container">
+          <button type="submit" class="btn">Book Now</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; Tasty Delights Fusion Kitchen. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,156 @@
+/* Reset only for order page */
+.order-body * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Wrapper */
+.order-body {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Header */
+.order-header {
+  background-color: #8b0000;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.order-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.order-nav a:hover,
+.order-nav a.active {
+  text-decoration: underline;
+}
+
+/* Hero */
+.order-hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("food-bg.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.order-hero h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.order-hero p {
+  font-size: 18px;
+}
+
+/* Menu Sections */
+.order-menu-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.order-menu-title {
+  font-size: 24px;
+  color: #8b0000;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #8b0000;
+  padding-bottom: 5px;
+}
+
+.order-menu-list {
+  list-style: none;
+}
+
+.order-menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+  border-bottom: 1px dashed #ccc;
+  font-size: 16px;
+}
+
+.order-menu-price {
+  font-weight: bold;
+}
+
+/* Order Form */
+.order-form-section {
+  background-color: #fff;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.order-form-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #8b0000;
+}
+
+.order-form input,
+.order-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Button */
+.order-btn {
+  width: 100%;
+  background-color: #8b0000;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.order-btn:hover {
+  background-color: #600000;
+}
+
+/* Footer */
+.order-footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .order-nav a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .order-hero h1 {
+    font-size: 28px;
+  }
+
+  .order-menu-item {
+    font-size: 14px;
+  }
+}

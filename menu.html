@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu - Tasty Delights Fusion Kitchen</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Tasty Delights Fusion Kitchen</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="login.html">Order Online</a>
+      <a href="reservation.html">Book a Table</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero section -->
+  <section class="hero">
+    <h1>Our Menu</h1>
+    <p>Click on a cuisine to explore delicious dishes</p>
+  </section>
+
+  <!-- Cuisine cards -->
+  <section class="cuisines">
+    <!-- Indian -->
+    <div class="cuisine-card">
+      <h3>🍛 Indian</h3>
+      <div class="dish-list">
+        <ul>
+          <li>Butter Chicken</li>
+          <li>Paneer Tikka Masala</li>
+          <li>Biryani (Veg/Chicken)</li>
+          <li>Dal Tadka</li>
+          <li>Naan & Roti Basket</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Chinese -->
+    <div class="cuisine-card">
+      <h3>🥢 Chinese</h3>
+      <div class="dish-list">
+        <ul>
+          <li>Chilli Chicken</li>
+          <li>Veg Manchurian</li>
+          <li>Hakka Noodles</li>
+          <li>Spring Rolls</li>
+          <li>Sweet Corn Soup</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Continental -->
+    <div class="cuisine-card">
+      <h3>🍝 Continental</h3>
+      <div class="dish-list">
+        <ul>
+          <li>Grilled Chicken with Herbs</li>
+          <li>Veg Lasagna</li>
+          <li>Pasta Alfredo</li>
+          <li>Caesar Salad</li>
+          <li>Garlic Bread</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Tasty Delights Fusion Kitchen. All rights reserved.</p>
+  </footer>
+
+  <!-- Expand/collapse script -->
+  <script>
+    document.querySelectorAll('.cuisine-card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

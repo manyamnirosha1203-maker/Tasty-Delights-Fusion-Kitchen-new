@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Tasty Delights Fusion Kitchen</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css" /> <!-- unique login styles -->
+  <script>
+    function validateLogin(event) {
+      event.preventDefault(); 
+      const username = document.getElementById("login-username").value.trim();
+      const password = document.getElementById("login-password").value.trim();
+
+      if (username === "" || password === "") {
+        alert("Both username and password are required!");
+        return false;
+      }
+
+      // Redirect to order.html after successful login
+      window.location.href = "order.html";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">Tasty Delights Fusion Kitchen</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="reservation.html">Book a Table</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="login-hero">
+    <h1>Welcome Back</h1>
+    <p>Please log in to access your account and enjoy exclusive offers</p>
+  </section>
+
+  <section class="login-container">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form onsubmit="validateLogin(event)">
+        <div class="login-field">
+          <label for="login-username">Username or Email</label>
+          <input type="text" id="login-username" name="username" required />
+        </div>
+        <div class="login-field">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" name="password" required />
+        </div>
+        <div class="login-field">
+          <button type="submit" class="login-btn">Login</button>
+        </div>
+        <p class="login-signup-link">Don’t have an account? <a href="register.html">Sign up here</a></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; Tasty Delights Fusion Kitchen. All rights reserved.</p>
+  </footer>
+</body>
+</html>

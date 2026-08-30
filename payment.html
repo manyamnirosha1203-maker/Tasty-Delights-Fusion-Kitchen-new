@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment - Tasty Delights Fusion Kitchen</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Tasty Delights Fusion Kitchen</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Order Online</a>
+      <a href="reservation.html">Book a Table</a>
+      <a href="contact.html">Contact</a>
+       <a href="logout.html">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="payment-hero">
+    <h1>Proceed to Payment</h1>
+    <p>Complete your order securely</p>
+  </section>
+
+  <!-- Payment Summary -->
+  <section class="payment-summary">
+    <h2>Your Total</h2>
+    <p id="totalAmount">₹0</p>
+  </section>
+
+  <!-- Payment Options -->
+  <section class="payment-options">
+    <h2>Select Payment Method</h2>
+    <form id="paymentForm">
+      <label>
+        <input type="radio" name="payment" value="card" checked />
+        Credit/Debit Card
+      </label><br/>
+      <label>
+        <input type="radio" name="payment" value="upi" />
+        UPI (Google Pay / PhonePe / Paytm)
+      </label><br/>
+      <label>
+        <input type="radio" name="payment" value="cod" />
+        Cash on Delivery
+      </label><br/><br/>
+
+      <!-- Card Details -->
+      <div id="cardDetails" class="payment-details">
+        <label>Card Number: 
+          <input type="text" id="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" />
+        </label><br/>
+        <label>Expiry Date: 
+          <input type="text" id="expiryDate" placeholder="MM/YY" />
+        </label><br/>
+        <label>CVV: 
+          <input type="password" id="cvv" placeholder="***" />
+        </label><br/>
+        <button type="button" class="payment-btn" id="submitCard">Submit Card Details</button>
+      </div>
+
+      <!-- OTP Section -->
+      <div id="otpSection" class="payment-details" style="display:none;">
+        <label>Enter OTP: <input type="text" id="otp" placeholder="123456" /></label><br/>
+        <button type="submit" class="payment-btn">Confirm Payment</button>
+      </div>
+
+      <!-- UPI Details -->
+      <div id="upiDetails" class="payment-details" style="display:none;">
+        <label>UPI ID: <input type="text" id="upiId" placeholder="example@upi" /></label><br/>
+        <button type="submit" class="payment-btn">Confirm Payment</button>
+      </div>
+
+      <!-- COD -->
+      <div id="codDetails" class="payment-details" style="display:none;">
+        <p>Cash on Delivery selected. Please confirm your order.</p>
+        <button type="submit" class="payment-btn">Confirm Order</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Tasty Delights Fusion Kitchen. All rights reserved.</p>
+  </footer>
+
+  <!-- Script -->
+ <script>
+  // Load total from localStorage
+  const orderData = JSON.parse(localStorage.getItem("orderSummary")) || [];
+  let total = 0;
+  orderData.forEach(item => {
+    total += item.price * item.qty;
+  });
+  document.getElementById("totalAmount").innerText = "₹" + total;
+
+  // Toggle payment details
+  const cardDetails = document.getElementById("cardDetails");
+  const upiDetails = document.getElementById("upiDetails");
+  const codDetails = document.getElementById("codDetails");
+  const otpSection = document.getElementById("otpSection");
+  const radios = document.querySelectorAll("input[name='payment']");
+
+  radios.forEach(radio => {
+    radio.addEventListener("change", function() {
+      if(this.value === "card"){
+        cardDetails.style.display = "block";
+        upiDetails.style.display = "none";
+        codDetails.style.display = "none";
+        otpSection.style.display = "none";
+      } else if(this.value === "upi"){
+        cardDetails.style.display = "none";
+        upiDetails.style.display = "block";
+        codDetails.style.display = "none";
+        otpSection.style.display = "none";
+      } else {
+        cardDetails.style.display = "none";
+        upiDetails.style.display = "none";
+        codDetails.style.display = "block";
+        otpSection.style.display = "none";
+      }
+    });
+  });
+
+  // Validate card details before showing OTP
+  document.getElementById("submitCard").addEventListener("click", function(){
+    const cardNumber = document.getElementById("cardNumber").value.trim();
+    const expiryDate = document.getElementById("expiryDate").value.trim();
+    const cvv = document.getElementById("cvv").value.trim();
+
+    if(cardNumber === "" || expiryDate === "" || cvv === ""){
+      alert("Please fill all details: Card Number, Expiry Date, and CVV.");
+      return;
+    }
+    if(cardNumber.length < 16){
+      alert("Card number must be at least 16 digits.");
+      return;
+    }
+    if(cvv.length < 3){
+      alert("CVV must be at least 3 digits.");
+      return;
+    }
+
+    // If validation passes, show OTP section
+    cardDetails.style.display = "none";
+    otpSection.style.display = "block";
+  });
+
+  // Validate OTP or UPI before final confirmation
+  document.getElementById("paymentForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    const selected = document.querySelector("input[name='payment']:checked").value;
+    if(selected === "card"){
+      const otp = document.getElementById("otp").value.trim();
+      if(otp.length !== 6){
+        alert("Please enter a valid 6-digit OTP.");
+        return;
+      }
+    }
+    if(selected === "upi"){
+      const upiId = document.getElementById("upiId").value.trim();
+      if(upiId === ""){
+        alert("Please enter your UPI ID.");
+        return;
+      }
+    }
+    // Redirect to success page after validation
+    window.location.href = "success.html";
+  });
+</script>
+</body>
+</html>

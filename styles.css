@@ -1,0 +1,1368 @@
+/* Logo styling */
+.logo { 
+  display: flex;  
+  align-items: center; 
+  font-size: 1em; 
+  font-weight: bold; 
+  color: white; 
+}
+
+.logo-img { 
+  height: 40px; /* adjust size of logo */
+  margin-right: 10px;
+}
+
+.logo-container { 
+  display: flex; 
+  align-items: center; 
+}
+
+/* Body & layout */
+html, body { 
+  height: 100%; 
+  margin: 0; 
+}
+
+body {
+  display: flex; 
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff8f0;
+  color: #333;
+  width: 100%; 
+  min-height: 100%;
+}
+
+/* Header & navigation */
+header {
+  background-color: #d35400;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 100%;
+}
+
+nav a {
+  margin: 0 1em;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active {
+  text-decoration: underline;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 7em 1em;
+  background-image: url('hero-food.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  width: 100%;
+}
+
+.hero .btn {
+  background-color: #e67e22;
+  color: white;
+  padding: 0.8em 1.5em;
+  margin: 1em;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.hero h1{
+font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #333;
+  font-family: 'Georgia', serif; /* or try 'Playfair Display', 'Times New Roman' */
+  font-size: 64px; /* adjust based on layout */
+  font-weight: 400; /* regular weight */
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* optional for depth */
+}
+
+
+
+.tagline {
+  font-size: 1.5em;   /* Bigger than normal paragraph */
+  font-weight: 600;
+  margin-top: -5px;   /* Moves tagline closer to the heading */
+  margin-bottom: 20px;
+  color: white;     /* Highlight color for tagline */
+  text-align: center;
+}
+
+
+
+/* Cuisine cards */
+.cuisines1 {
+  display: flex;
+  justify-content: center;
+  gap: 50px;              /* space between cards */
+  margin: 40px auto;
+  flex-wrap: wrap;        /* allows wrapping on smaller screens */
+}
+
+.cuisine-card1 {
+  width: 400px;           /* smaller card width */
+  text-align: center;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cuisine-card1 img {
+  width: 300px;           /* smaller image size */
+  height: 250px;          /* fixed height for consistency */
+  object-fit: cover;      /* keeps aspect ratio */
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.cuisine-card1 h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.cuisine-card1 .btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+}
+
+
+
+/* Reservation & contact form cards */
+.reservation {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reservation-card {
+  background-color: #fff;
+  padding: 1.5em;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px; /* smaller form */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.reservation-card h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.reservation-card label {
+  display: block;
+  margin-top: 0.8rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.reservation-card input,
+.reservation-card textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+/* Buttons */
+.button-container {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.btn {
+  background-color: #d35400;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #b84300;
+}
+
+.btn.big-btn {
+  font-size: 1.1rem;
+  padding: 0.6rem 1.5rem;
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn.big-btn:hover {
+  background: #005fa3;
+}
+
+
+
+/* Footer */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem;
+  background-color: #d35400;
+  color: white;
+  width: 100%;
+}
+
+
+
+/* Cuisine cards layout: one column, three rows */
+.cuisines {
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: center;      /* center cards horizontally */
+  padding: 2em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cuisine-card {
+  background-color: #fff;
+  padding: 1.5em;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;               /* card spans most of the page width */
+  margin: 1em 0;            /* spacing between rows */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cuisine-card:hover {
+  transform: scale(1.02);
+}
+
+.cuisine-card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #d35400;
+}
+
+.dish-list {
+  display: none; /* hidden by default */
+  margin-top: 1em;
+  text-align: left;
+}
+
+.dish-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dish-list li {
+  padding: 0.4em 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+}
+
+.cuisine-card.active .dish-list {
+  display: block; /* show when active */
+}
+
+
+
+/* Order page specific styles */
+.order-section {
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: center;
+  padding: 2em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.order-card {
+  background-color: #fff;
+  padding: 1.5em;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  margin: 1em auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.order-card:hover {
+  transform: scale(1.02);
+}
+
+.order-card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #d35400;
+}
+
+.order-dish-list {
+  display: none;
+  margin-top: 1em;
+  text-align: left;
+}
+
+.order-dish-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+
+
+/*.order-dish-list li {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}*/
+
+.order-dish-list li { 
+display: flex; 
+justify-content: space-between; 
+align-items: center; padding: 8px 0; 
+border-bottom: 1px solid #eee; }
+
+.order-dish-list button {
+  background-color: #d35400;
+  color: white;
+  border: none;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order-dish-list button:hover {
+  background-color: #b84300;
+}
+
+.order-card.active .order-dish-list {
+  display: block;
+}
+
+
+
+
+/* Cart section styles 
+.cart {
+  background-color: #fff;
+  padding: 1.5em;
+  border-radius: 10px;
+  width: 90%;
+  margin: 2em auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.cart h2 {
+  margin-top: 0;
+  color: #d35400;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+}
+
+#cart-items li {
+  padding: 0.4em 0;
+  border-bottom: 1px solid #eee;
+}
+
+#checkout-btn {
+  background-color: #d35400;
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#checkout-btn:hover {
+  background-color: #b84300;
+}*/
+
+
+/* Cart section styles */
+.cart-section {
+  background-color: #fff;
+  padding: 1.5em;
+  border-radius: 10px;
+  width: 90%;
+  margin: 2em auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.cart-section h2 {
+  margin-top: 0;
+  color: #d35400;
+}
+
+
+
+
+.cart-total {
+  font-weight: bold;
+  color: #333;
+}
+
+.cart-checkout {
+  background-color: #d35400;
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-checkout:hover {
+  background-color: #b84300;
+}
+
+
+.order-dish-list .qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.order-dish-list .qty-controls button {
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.order-dish-list .qty-controls .qty {
+  min-width: 20px;
+  text-align: center;
+}
+.qty-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.qty-controls button {
+  padding: 4px 8px;
+  font-size: 14px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.qty-controls .qty {
+  min-width: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.order-inline-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.order-inline-controls button {
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.order-qty-count {
+  min-width: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+/* ===========================
+   Order Online Page Styles
+   =========================== */
+
+/* Hero section */
+.order-hero { text-align: center; 
+padding: 60px 20px; 
+background: url('hero-food.jpg') center/cover no-repeat;
+ color: #fff;
+ position: relative; }
+.order-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.order-hero p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* Expandable cuisine sections */
+.order-section {
+  margin: 30px auto;
+  max-width: 900px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.order-section summary {
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 15px;
+  background: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+.order-section[open] summary {
+  background: #eaeaea;
+}
+
+/* Food items */
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+}
+.order-item span {
+  flex: 1;
+  font-size: 1rem;
+}
+.order-item .order-price {
+  width: 120px;
+  text-align: right;
+  margin-right: 20px;
+  font-weight: bold;
+  color: #444;
+}
+.order-item select {
+  width: 70px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Checkout button */
+.order-summary {
+  text-align: center;
+  margin: 40px 0;
+}
+.order-btn {
+  background: #e63946;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+.order-btn:hover {
+  background: #d62828;
+}
+
+
+.checkout-hero {
+  text-align: center; 
+  padding: 60px 20px; 
+ background: url('hero-food.jpg') center/cover no-repeat;
+ color: #fff;
+ position: relative; }
+ .order-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.checkout-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.checkout-hero p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.checkout-summary {
+  max-width: 800px;
+  margin: 30px auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 20px;
+}
+
+.checkout-item,
+.checkout-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.checkout-total {
+  border-top: 2px solid #ccc;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.checkout-name {
+  flex: 2;
+  font-size: 1rem;
+}
+
+.checkout-qty {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.checkout-price {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+  color: #444;
+}
+
+.checkout-actions {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.checkout-btn {
+  background: #e63946;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+.checkout-btn:hover {
+  background: #d62828;
+}
+
+.remove-btn {
+  background: #6c757d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin-left: 15px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: #5a6268;
+}
+
+.payment-hero {
+   text-align: center; 
+  padding: 60px 20px; 
+ background: url('hero-food.jpg') center/cover no-repeat;
+ color: #fff;
+ position: relative; }
+ .order-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.payment-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.payment-hero p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.payment-summary {
+  text-align: center;
+  margin: 30px auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.payment-options {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 20px;
+}
+
+.payment-options h2 {
+  margin-bottom: 15px;
+}
+
+.payment-btn {
+  background: #e63946;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+.payment-btn:hover {
+  background: #d62828;
+}
+
+.payment-details {
+  margin: 15px 0;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+.payment-details label {
+  display: block;
+  margin: 8px 0;
+}
+.payment-details input {
+  padding: 6px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.success-hero {
+   text-align: center; 
+  padding: 60px 20px; 
+ background: url('hero-food.jpg') center/cover no-repeat;
+ color: #fff;
+ position: relative; }
+ .order-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.success-hero h1 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+.success-hero p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.order-confirmation {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 20px;
+  text-align: center;
+}
+
+.order-confirmation h2 {
+  margin-bottom: 15px;
+}
+
+.success-btn {
+  display: inline-block;
+  background: #e63946;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+.success-btn:hover {
+  background: #d62828;
+}
+
+.tracking-hero {
+  text-align: center; 
+  padding: 60px 20px; 
+ background: url('hero-food.jpg') center/cover no-repeat;
+ color: #fff;
+ position: relative; }
+ .order-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px
+
+}
+.tracking-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.tracking-hero p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.tracking-progress {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 20px;
+  text-align: center;
+}
+
+.progress-container {
+  width: 100%;
+  background: #eee;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+.progress-bar {
+  width: 0%;
+  height: 20px;
+  background: #2a9d8f;
+  border-radius: 8px;
+  transition: width 2s ease;
+}
+
+.tracking-progress ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tracking-progress li {
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  background: #eee;
+  font-weight: bold;
+}
+
+.tracking-progress li.active {
+  background: #2a9d8f;
+  color: #fff;
+}
+
+.login-hero {
+  text-align: center; 
+  padding: 60px 20px; 
+ background: url('hero-food.jpg') center/cover no-repeat;
+ color: #fff;
+ position: relative; }
+ .order-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.login-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  animation: loginFadeIn 1s ease-in-out;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #e67e22;
+}
+
+.login-field {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.login-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.login-field input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.login-field input:focus {
+  border-color: #e67e22;
+  outline: none;
+}
+
+.login-btn {
+  background: #e67e22;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.login-btn:hover {
+  background: #d35400;
+}
+
+.login-signup-link {
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+.login-signup-link a {
+  color: #e67e22;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-signup-link a:hover {
+  text-decoration: underline;
+}
+
+@keyframes loginFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+.register-hero {
+  text-align: center; 
+  padding: 60px 20px; 
+ background: url('hero-food.jpg') center/cover no-repeat;
+ color: #fff;
+ position: relative; }
+ .order-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #f8f9fa, #e0f7fa);
+}
+
+.register-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  animation: registerFadeIn 1s ease-in-out;
+}
+
+.register-box h2 {
+  margin-bottom: 20px;
+  color: #e67e22;
+}
+
+.register-field {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.register-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.register-field input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.register-field input:focus {
+  border-color: #e67e22;
+  outline: none;
+}
+
+.register-btn {
+  background: #e67e22;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.register-btn:hover {
+  background: #d35400;
+}
+
+.register-login-link {
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+.register-login-link a {
+  color: #e67e22;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-login-link a:hover {
+  text-decoration: underline;
+}
+
+@keyframes registerFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Adjusted form styling */
+    .reservation {
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .reservation-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 2rem;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .reservation-card h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    form input {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.4rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      font-size: 1.1rem;
+      padding: 0.8rem 2rem;
+      background: #0077cc;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #005fa3;
+    }
+
+
+.logout-hero {
+  text-align: center; 
+  padding: 60px 20px; 
+ background: url('hero-food.jpg') center/cover no-repeat;
+ color: #fff;
+ position: relative; }
+ .order-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px
+}
+
+.logout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.logout-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  animation: logoutFadeIn 1s ease-in-out;
+}
+
+.logout-box h2 {
+  margin-bottom: 15px;
+  color: #e67e22;
+}
+
+.logout-box p {
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.logout-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logout-btn {
+  background: #e67e22;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: #d35400;
+}
+
+.logout-btn.secondary {
+  background: #2e7d32;
+}
+
+.logout-btn.secondary:hover {
+  background: #1b5e20;
+}
+
+@keyframes logoutFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.indian-hero {
+   text-align: center; 
+  padding: 60px 20px; 
+ background: url('hero-food.jpg') center/cover no-repeat;
+ color: #fff;
+ position: relative; }
+ .order-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px
+}
+
+.indian-title {
+  font-size: 2.5em;
+  color: #fff;
+}
+
+.indian-subtitle {
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.indian-menu-section {
+  display: flex;
+  justify-content: center;   /* centers the whole menu block */
+}
+
+.indian-cuisine-card {
+  width: 90%;
+  margin: 30px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.indian-heading {
+  margin-bottom: 20px;
+  color: #e67e22;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.indian-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px; /* keeps menu compact and centered */
+}
+
+.indian-menu-item {
+  display: grid;
+  grid-template-columns: auto 80px; /* left column flexible, right column fixed */
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ccc;
+  font-size: 1.1rem;
+}
+
+.indian-menu-item:last-child {
+  border-bottom: none;
+}
+
+.indian-dish {
+  font-weight: 500;
+}
+
+.indian-price {
+  font-weight: bold;
+  color: #2e7d32;
+  text-align: right;
+}
+
+.chinese-cuisine-card {
+  width: 90%;
+  margin: 30px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.chinese-heading {
+  margin-bottom: 20px;
+  color: #c62828; /* deep red for Chinese theme */
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.chinese-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px; /* keeps menu compact and centered */
+}
+
+.chinese-menu-item {
+  display: grid;
+  grid-template-columns: 1fr auto; /* dish name left, price aligned right */
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ccc;
+  font-size: 1.1rem;
+}
+
+.chinese-menu-item:last-child {
+  border-bottom: none;
+}
+
+.chinese-dish {
+  font-weight: 500;
+}
+
+.chinese-price {
+  font-weight: bold;
+  color: #2e7d32; /* green for prices */
+  text-align: right;
+  min-width: 60px; /* ensures consistent alignment */
+}
+
+
+.continental-cuisine-card {
+  width: 90%;
+  margin: 30px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.continental-heading {
+  margin-bottom: 20px;
+  color: #1565c0; /* deep blue for Continental theme */
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.continental-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px; /* keeps menu compact and centered */
+}
+
+.continental-menu-item {
+  display: grid;
+  grid-template-columns: 1fr auto; /* dish name left, price aligned right */
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ccc;
+  font-size: 1.1rem;
+}
+
+.continental-menu-item:last-child {
+  border-bottom: none;
+}
+
+.continental-dish {
+  font-weight: 500;
+}
+
+.continental-price {
+  font-weight: bold;
+  color: #2e7d32; /* green for prices */
+  text-align: right;
+  min-width: 60px; /* ensures consistent alignment */
+}
+
